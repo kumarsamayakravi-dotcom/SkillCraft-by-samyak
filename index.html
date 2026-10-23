@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Tasks - SkillCraft Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">SkillCraft Tasks</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#stopwatch">Stopwatch</a></li>
+                    <li><a href="#tictactoe">Tic-Tac-Toe</a></li>
+                    <li><a href="#todo">To-Do App</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+
+            <h1>Web Development Tasks</h1>
+            <p class="subtitle">SkillCraft Technology Project</p>
+            <div class="hero-buttons">
+                <a href="#stopwatch" class="btn btn-primary">Task 2: Stopwatch</a>
+                <a href="#tictactoe" class="btn btn-primary">Task 3: Tic-Tac-Toe</a>
+                <a href="#todo" class="btn btn-primary">Task 4: To-Do App</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="task1-info" class="info-section">
+        <div class="container">
+            <div class="task-badge">Task 01</div>
+            <h2>Responsive Landing Page & Navigation Menu</h2>
+            <p>This entire website is built with a responsive layout. The navigation bar at the top has a fixed
+                position, stays visible on all sections, and changes its style dynamically when scrolled. Hovering over
+                any navigation link changes its appearance.</p>
+        </div>
+    </section>
+
+    <section id="stopwatch" class="task-section">
+        <div class="container">
+            <div class="task-badge">Task 02</div>
+            <h2>Stopwatch Web Application</h2>
+            <p class="task-desc">Measure elapsed time with precision. Supports starting, pausing, resetting, and
+                recording lap times.</p>
+
+            <div class="stopwatch-card">
+                <div id="stopwatch-display">00:00:00.00</div>
+
+                <div class="button-group">
+                    <button id="start-btn" class="btn btn-green">Start</button>
+                    <button id="pause-btn" class="btn btn-orange">Pause</button>
+                    <button id="reset-btn" class="btn btn-red">Reset</button>
+                    <button id="lap-btn" class="btn btn-blue">Lap</button>
+                </div>
+
+                <div class="laps-container">
+                    <h3>Recorded Laps</h3>
+                    <ul id="laps-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tictactoe" class="task-section">
+        <div class="container">
+            <div class="task-badge">Task 03</div>
+            <h2>Tic-Tac-Toe Web Application</h2>
+            <p class="task-desc">Play the classic 3x3 game against another player or test your luck against the
+                computer.</p>
+
+            <div class="game-card">
+                <div class="mode-select">
+                    <label for="game-mode">Game Mode: </label>
+                    <select id="game-mode">
+                        <option value="pvp">Player vs Player</option>
+                        <option value="pvc">Player vs Computer</option>
+                    </select>
+                </div>
+
+                <div id="game-status">Player X's Turn</div>
+
+                <div class="board" id="board">
+                    <button class="cell" data-index="0"></button>
+                    <button class="cell" data-index="1"></button>
+                    <button class="cell" data-index="2"></button>
+                    <button class="cell" data-index="3"></button>
+                    <button class="cell" data-index="4"></button>
+                    <button class="cell" data-index="5"></button>
+                    <button class="cell" data-index="6"></button>
+                    <button class="cell" data-index="7"></button>
+                    <button class="cell" data-index="8"></button>
+                </div>
+
+                <div class="score-card">
+                    <div class="score-item">Player X: <span id="x-score">0</span></div>
+                    <div class="score-item">Player O: <span id="o-score">0</span></div>
+                    <div class="score-item">Draws: <span id="draw-score">0</span></div>
+                </div>
+
+                <button id="restart-game-btn" class="btn btn-secondary">Restart Game</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="todo" class="task-section">
+        <div class="container">
+            <div class="task-badge">Task 04</div>
+            <h2>To-Do Web Application</h2>
+            <p class="task-desc">Organize daily activities with task management, completion status, due date and time,
+                and quick editing.</p>
+
+            <div class="todo-card">
+                <form id="todo-form">
+                    <div class="form-row">
+                        <input type="text" id="todo-input" placeholder="What needs to be done?" required>
+                        <input type="datetime-local" id="todo-datetime" required>
+                        <button type="submit" class="btn btn-primary">Add Task</button>
+                    </div>
+                </form>
+
+                <div class="todo-summary">
+                    <span id="task-count">Total: 0</span>
+                    <button id="clear-completed-btn" class="btn-text">Clear Completed</button>
+                </div>
+
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>SkillCraft Technology Internship | Made with HTML, CSS, and JavaScript</p>
+            <p>B.Tech 2nd Year Student Project</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
